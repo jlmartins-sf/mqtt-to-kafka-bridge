@@ -21,4 +21,4 @@ The bridge spins up an http server, which can be used to check its health status
 
 ## Maintainer
 
-Build with :heart: :pizza: and :coffee: by [nodefluent](https://github.com/nodefluent)
+Build with :heart: :pizza: and :coffee: by [nodefluent](https://github.com/nodefluent) and [jeffersonlmartins](https://github.com/jlmartins-sf)
