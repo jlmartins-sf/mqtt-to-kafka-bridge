@@ -5,7 +5,7 @@ module.exports = {
     // mqtt connection options
     mqtt: { // # see https://github.com/mqttjs/MQTT.js#mqttclientstreambuilder-options
         url: "mqtt://your.url.mqtt.server.com",
-        baseTopic: "from/#",
+        baseTopic: "YourTopicFromMQTT",
         options: {
             clientId: "example-client-that-show-on-emqx",
             username: "example",
@@ -56,7 +56,7 @@ module.exports = {
         //"*": "kafka-test", // from all to single kafka-test topic
         //"mqtt-topic": "kafka-topic", // from mqtt-topic to kafka-topic only
 
-        "*": "your-topic-from-kafka"
+        "*": "YourTopicFromKAFKA"
     },
 
     // if routed messages should be logged to debug
