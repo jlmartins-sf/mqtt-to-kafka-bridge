@@ -1,7 +1,6 @@
 # mqtt-to-kafka-bridge - consume, (etl/mirror), produce
 
 [![npm version](https://badge.fury.io/js/mqtt-to-kafka-bridge.svg)](https://badge.fury.io/js/mqtt-to-kafka-bridge)
-[![Docker Repository on Quay](https://quay.io/repository/nodefluent/mqtt-to-kafka-bridge/status "Docker Repository on Quay")](https://quay.io/repository/nodefluent/mqtt-to-kafka-bridge)
 
 ## Intro
 
@@ -16,9 +15,12 @@ Use `npm install` to install all dependencies from application.
 
 Use `npm run start` to start the application
 
+
 If you want, you can use docker container to start the application.
 
 `docker build -t YourImage:tag .`
+
+`docker run -d YourImage:tag`
 
 Just check out the example [here](example/sample.js) it also gives you description on the configuration options.
 You can find the sample configuration [here](example/config.js).
