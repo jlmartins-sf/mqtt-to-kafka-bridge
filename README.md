@@ -12,6 +12,14 @@ on MQTT consume, as well as on Kafka produce. You just pass everything in a simp
 
 ## How to use?
 
+Use `npm install` to install all dependencies from application.
+
+Use `npm run start` to start the application
+
+If you want, you can use docker container to start the application.
+
+`docker build -t YourImage:tag .`
+
 Just check out the example [here](example/sample.js) it also gives you description on the configuration options.
 You can find the sample configuration [here](example/config.js).
 

@@ -4,14 +4,14 @@ module.exports = {
 
     // mqtt connection options
     mqtt: { // # see https://github.com/mqttjs/MQTT.js#mqttclientstreambuilder-options
-        url: null,
+        url: "mqtt://your.url.mqtt.server.com",
         baseTopic: "from/#",
         options: {
-            clientId: "example-client",
+            clientId: "example-client-that-show-on-emqx",
             username: "example",
             password: "1234",
-            host: "some.mqtt.server.com",
-            port: 8080,
+            host: "mqtt://your.url.mqtt.server.com",
+            port: 1883,
             protocolId: "MQTT",
             protocolVersion: 4,
         }
@@ -23,7 +23,7 @@ module.exports = {
         noptions: {
             //"debug": "all",
 
-            "metadata.broker.list": "localhost:9092",
+            "metadata.broker.list": "your.url.or.ip.kafka.server.com:9092",
             "client.id": "mqtt-bridge-example-client",
             "event_cb": true,
             "compression.codec": "none",
@@ -56,7 +56,7 @@ module.exports = {
         //"*": "kafka-test", // from all to single kafka-test topic
         //"mqtt-topic": "kafka-topic", // from mqtt-topic to kafka-topic only
 
-        "*": "mqtt-bridge-example"
+        "*": "your-topic-from-kafka"
     },
 
     // if routed messages should be logged to debug
