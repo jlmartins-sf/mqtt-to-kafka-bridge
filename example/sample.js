@@ -1,5 +1,7 @@
 "use strict";
 
+require('dotenv').config()
+
 const Bridge = require("./../index.js");
 
 let config = require("./config.js");

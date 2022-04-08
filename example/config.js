@@ -4,15 +4,15 @@ module.exports = {
 
     // mqtt connection options
     mqtt: { // # see https://github.com/mqttjs/MQTT.js#mqttclientstreambuilder-options
-        url: "mqtt://your.url.mqtt.server.com",
-        baseTopic: "YourTopicFromMQTT",
+        url: process.env.MQTT_HOST || "mqtt://you.url.mqtt.server.com",
+        baseTopic: process.env.MQTT_TOPIC || "YourTopicFromKafka",
         options: {
-            clientId: "example-client-that-show-on-emqx",
-            username: "example",
-            password: "1234",
-            host: "mqtt://your.url.mqtt.server.com",
-            port: 1883,
-            protocolId: "MQTT",
+            clientId: process.env.MQTT_CLIENT_ID || "nodejs-emqx-client",
+            username: process.env.MQTT_USERNAME || "user",
+            password: process.env.MQTT_PASSWORD || "password",
+            host: process.env.MQTT_HOST || "mqtt://you.url.mqtt.server.com",
+            port: process.env.MQTT_PORT || "1883",
+            protocolId: process.env.MQTT_PROTOCOL.toUpperCase() || "MQTT",
             protocolVersion: 4,
         }
     },
@@ -23,8 +23,8 @@ module.exports = {
         noptions: {
             //"debug": "all",
 
-            "metadata.broker.list": "your.url.or.ip.kafka.server.com:9092",
-            "client.id": "mqtt-bridge-example-client",
+            "metadata.broker.list": process.env.KAFKA_HOST || "your.url.or.ip.kafka.server.com:9092",
+            "client.id": process.env.KAFKA_CLIENT_ID || "mqtt-bridge-kafka-client",
             "event_cb": true,
             "compression.codec": "none",
             "retry.backoff.ms": 200,
@@ -56,7 +56,7 @@ module.exports = {
         //"*": "kafka-test", // from all to single kafka-test topic
         //"mqtt-topic": "kafka-topic", // from mqtt-topic to kafka-topic only
 
-        "*": "YourTopicFromKAFKA"
+        "*": process.env.KAFKA_TOPIC
     },
 
     // if routed messages should be logged to debug
