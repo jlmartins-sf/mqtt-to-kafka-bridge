@@ -5,7 +5,7 @@ module.exports = {
     // mqtt connection options
     mqtt: { // # see https://github.com/mqttjs/MQTT.js#mqttclientstreambuilder-options
         url: process.env.MQTT_HOST || "mqtt://you.url.mqtt.server.com",
-        baseTopic: process.env.MQTT_TOPIC || "YourTopicFromKafka",
+        baseTopic: process.env.MQTT_TOPIC || "YourTopicFromMQTT",
         options: {
             clientId: process.env.MQTT_CLIENT_ID || "nodejs-emqx-client",
             username: process.env.MQTT_USERNAME || "user",
